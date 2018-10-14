@@ -29,10 +29,8 @@
                             <span class="asteriskField">*</span>
                         </label>
                         <div class="col-sm-10">
-                            <div class="input-group">
-                                <input class="form-control" name="work_name" type="text" value="<?= $work->work_name ?>"
-                                       required/>
-                            </div>
+                            <input class="form-control" name="work_name" type="text" value="<?= $work->work_name ?>"
+                                   required/>
                         </div>
                     </div>
                     <div class="form-group ">
@@ -68,6 +66,21 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group ">
+                        <label class="control-label col-sm-2 requiredField" for="date">
+                            Status
+                            <span class="asteriskField">*</span>
+                        </label>
+                        <div class="col-sm-10">
+                            <select class="form-control" name="status">
+                                <option <?= $work->status == 1 ? 'selected' : '' ?> value="1">Planing</option>
+                                <option <?= $work->status == 2 ? 'selected' : '' ?> value="2">Doing</option>
+                                <option <?= $work->status == 3 ? 'selected' : '' ?> value="3">Complete</option>
+                            </select>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
                             <button class="btn btn-primary " type="submit">

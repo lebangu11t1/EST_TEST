@@ -82,12 +82,14 @@ class Work
         $work_name     = $data['work_name'];
         $starting_date = $data['starting_date'];
         $ending_date   = $data['ending_date'];
+        $status        = $data['status'];
 
         $db   = DB::getInstance();
         $sql  = "UPDATE works SET 
                 work_name='".$work_name."', 
                 starting_date='".$starting_date."', 
-                ending_date='".$ending_date."' 
+                ending_date='".$ending_date."' ,
+                status='".$status."' 
                 WHERE id='".$id."'";
 
         if ($db->query($sql) === TRUE) {

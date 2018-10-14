@@ -18,16 +18,32 @@
 
 <ul id="myUL">
     <?php foreach ($works as $work) { ?>
-        <li><?= $work->work_name ?></li>
-        <div class="text-right action">
-            <a href="index.php?controller=works&action=showEdit&id=<?= $work->id ?>">
-                <button class="btn btn-primary">Edit</button>
-            </a>
-            <a href="index.php?controller=works&action=delete&id=<?= $work->id ?>"
-               onclick="return confirm('Are you sure you want to delete this item?');">
-                <button class="btn btn-danger">Remove</button>
-            </a>
-        </div>
+        <li style="border: 1px solid white; margin-bottom: 2px;" class="<?= $work->status == 3 ? 'checked' : '' ?>">
+            <?= $work->work_name ?> <br>
+
+            <?php if ($work->status == 1) {?>
+                <span style="color: black">Planing</span>
+            <?php } ?>
+
+            <?php if ($work->status == 2) {?>
+                <span style="color: red">Doing</span>
+            <?php } ?>
+
+            <?php if ($work->status == 3) {?>
+                <span style="color: greenyellow">Complete</span>
+            <?php } ?>
+
+            <div class="text-right action">
+                <a href="index.php?controller=works&action=showEdit&id=<?= $work->id ?>">
+                    <button class="btn btn-primary">Edit</button>
+                </a>
+                <a href="index.php?controller=works&action=delete&id=<?= $work->id ?>"
+                   onclick="return confirm('Are you sure you want to delete this item?');">
+                    <button class="btn btn-danger">Remove</button>
+                </a>
+            </div>
+        </li>
+
     <?php } ?>
 </ul>
 
