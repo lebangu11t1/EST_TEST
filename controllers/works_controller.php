@@ -44,11 +44,17 @@ class WorksController extends BaseController
 
     public function edit()
     {
-
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $id = $_POST['id'];
             Work::update($id, $_POST);
         }
+        header('Location: index.php?controller=works&action=index');
+    }
+
+    public function delete()
+    {
+        $id = $_GET['id'];
+        Work::delete($id);
         header('Location: index.php?controller=works&action=index');
     }
 }

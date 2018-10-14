@@ -1,7 +1,7 @@
 <?php
 
 $controllers = array(
-    'works' => ['index','create','error','showCreate', 'showEdit', 'edit'],
+    'works' => ['index','create','error','showCreate', 'showEdit', 'edit', 'delete'],
 ); // Các controllers trong hệ thống và các action có thể gọi ra từ controller đó.
 
 // Nếu các tham số nhận được từ URL không hợp lệ (không thuộc list controller và action có thể gọi

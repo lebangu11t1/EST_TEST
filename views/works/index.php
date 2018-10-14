@@ -23,7 +23,8 @@
             <a href="index.php?controller=works&action=showEdit&id=<?= $work->id ?>">
                 <button class="btn btn-primary">Edit</button>
             </a>
-            <a href="#">
+            <a href="index.php?controller=works&action=delete&id=<?= $work->id ?>"
+               onclick="return confirm('Are you sure you want to delete this item?');">
                 <button class="btn btn-danger">Remove</button>
             </a>
         </div>

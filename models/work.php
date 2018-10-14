@@ -7,15 +7,13 @@ class Work
     public $starting_date;
     public $ending_date;
     public $status;
-    public $deleted_at;
 
     function __construct(
         $id,
         $work_name,
         $starting_date,
         $ending_date,
-        $status,
-        $deleted_at
+        $status
     )
     {
         $this->id               = $id;
@@ -23,7 +21,6 @@ class Work
         $this->starting_date    = $starting_date;
         $this->ending_date      = $ending_date;
         $this->status           = $status;
-        $this->deleted_at       = $deleted_at;
     }
 
     static function find($id)
@@ -39,8 +36,7 @@ class Work
                 $item['work_name'],
                 $item['starting_date'],
                 $item['ending_date'],
-                $item['status'],
-                $item['deleted_at']
+                $item['status']
             );
         }
         return null;
@@ -58,8 +54,7 @@ class Work
                 $item['work_name'],
                 $item['starting_date'],
                 $item['ending_date'],
-                $item['status'],
-                $item['deleted_at']
+                $item['status']
             );
         }
 
@@ -74,8 +69,8 @@ class Work
         $status        = 1;
 
         $db   = DB::getInstance();
-        $sql  = "INSERT INTO works (work_name, starting_date, ending_date, status, deleted_at)
-                 VALUES ('".$work_name."', '".$starting_date."', '".$ending_date."', $status, null)";
+        $sql  = "INSERT INTO works (work_name, starting_date, ending_date, status)
+                 VALUES ('".$work_name."', '".$starting_date."', '".$ending_date."', $status)";
 
         if ($db->query($sql) === TRUE) {
             echo "New record created successfully";
@@ -97,6 +92,18 @@ class Work
 
         if ($db->query($sql) === TRUE) {
             echo "Record updated successfully";
+        } else {
+            echo "Error updating record: " . $db->error;
+        }
+    }
+
+    static function delete($id)
+    {
+        $db   = DB::getInstance();
+        $sql  = "DELETE FROM  works WHERE id='".$id."'";
+
+        if ($db->query($sql) === TRUE) {
+            echo "Record deleted successfully";
         } else {
             echo "Error updating record: " . $db->error;
         }
