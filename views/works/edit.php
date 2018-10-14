@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>EST Test</title>
 </head>
 <body>
-
 <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css"/>
 <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="assets/css/style.css">
-
 <div id="myDIV" class="header">
-    <h2 style="margin:5px">My To Do List</h2>
+    <h2 style="margin:5px">Edit Works</h2>
 </div>
-
 <div class="bootstrap-iso">
     <div class="container-fluid" style="margin-top: 50px;">
         <div class="row">
@@ -67,7 +63,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="form-group ">
                         <label class="control-label col-sm-2 requiredField" for="date">
                             Status
@@ -81,12 +76,16 @@
                             </select>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="col-sm-10 col-sm-offset-2">
                             <button class="btn btn-primary " type="submit">
                                 Submit
                             </button>
+                            <a href="index.php?controller=works&action=index">
+                                <button class="btn " type="button">
+                                    Back
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </form>
@@ -94,8 +93,6 @@
         </div>
     </div>
 </div>
-
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
@@ -123,7 +120,5 @@
         });
     })
 </script>
-
 </body>
-
 </html>

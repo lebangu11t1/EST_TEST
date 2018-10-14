@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <title>EST Test</title>
 </head>
 <body>
-
 <script type="text/javascript" src="https://formden.com/static/cdn/formden.js"></script>
 <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css"/>
 <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css"/>
 <link rel="stylesheet" href="assets/css/style.css">
-
 <div id="myDIV" class="header">
-    <h2 style="margin:5px">My To Do List</h2>
+    <h2 style="margin:5px">Add Works</h2>
 </div>
-
 <div class="bootstrap-iso">
     <div class="container-fluid" style="margin-top: 50px;">
         <div class="row">
@@ -69,6 +65,11 @@
                             <button class="btn btn-primary " type="submit">
                                 Submit
                             </button>
+                            <a href="index.php?controller=works&action=index">
+                                <button class="btn " type="button">
+                                    Back
+                                </button>
+                            </a>
                         </div>
                     </div>
                 </form>
@@ -76,14 +77,11 @@
         </div>
     </div>
 </div>
-
-
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
 <link rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
-
 <script>
     $(document).ready(function () {
         var starting_date = $('input[name="starting_date"]');
@@ -105,7 +103,5 @@
         });
     })
 </script>
-
 </body>
-
 </html>
