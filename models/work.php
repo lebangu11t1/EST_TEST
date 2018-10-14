@@ -45,4 +45,20 @@ class Work
 
         return $list;
     }
+
+    static function create($data)
+    {
+        $work_name     = $data['work_name'];
+        $starting_date = $data['starting_date'];
+        $ending_date   = $data['ending_date'];
+        $status        = 1;
+
+        $db   = DB::getInstance();
+        $sql = "INSERT INTO works (work_name, starting_date, ending_date, status, deleted_at)
+  VALUES ('".$work_name."', '".$starting_date."', '".$ending_date."', $status, null)";
+
+        if ($db->query($sql) === TRUE) {
+            echo "New record created successfully";
+        }
+    }
 }

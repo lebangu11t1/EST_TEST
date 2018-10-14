@@ -21,4 +21,17 @@ class WorksController extends BaseController
     {
         $this->render('error');
     }
+
+    public function showCreate()
+    {
+        $this->render('create');
+    }
+
+    public function create()
+    {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            Work::create($_POST);
+        }
+        header('Location: index.php?controller=works&action=index');
+    }
 }
