@@ -18,8 +18,9 @@
 </div>
 
 <div class="bootstrap-iso">
-    <div class="container-fluid">
+    <div class="container-fluid" style="margin-top: 50px;">
         <div class="row">
+            <div class="col-sm-3"></div>
             <div class="col-md-6 col-sm-6 col-xs-12">
                 <form action="index.php?controller=works&action=edit" class="form-horizontal" method="post">
                     <input type="hidden" name="id" value="<?= $work->id ?>">
