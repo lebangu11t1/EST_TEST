@@ -34,4 +34,21 @@ class WorksController extends BaseController
         }
         header('Location: index.php?controller=works&action=index');
     }
+
+    public function showEdit()
+    {
+        $work = Work::find($_GET['id']);
+        $data = array('work' => $work);
+        $this->render('edit', $data);
+    }
+
+    public function edit()
+    {
+
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $id = $_POST['id'];
+            Work::update($id, $_POST);
+        }
+        header('Location: index.php?controller=works&action=index');
+    }
 }

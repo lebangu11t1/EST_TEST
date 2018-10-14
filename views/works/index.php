@@ -19,6 +19,14 @@
 <ul id="myUL">
     <?php foreach ($works as $work) { ?>
         <li><?= $work->work_name ?></li>
+        <div class="text-right action">
+            <a href="index.php?controller=works&action=showEdit&id=<?= $work->id ?>">
+                <button class="btn btn-primary">Edit</button>
+            </a>
+            <a href="#">
+                <button class="btn btn-danger">Remove</button>
+            </a>
+        </div>
     <?php } ?>
 </ul>
 
