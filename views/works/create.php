@@ -17,7 +17,6 @@
     <h2 style="margin:5px">My To Do List</h2>
 </div>
 
-<!-- HTML Form (wrapped in a .bootstrap-iso div) -->
 <div class="bootstrap-iso">
     <div class="container-fluid" style="margin-top: 50px;">
         <div class="row">

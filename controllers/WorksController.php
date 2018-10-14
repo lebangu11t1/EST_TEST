@@ -1,7 +1,7 @@
 <?php
 
-require_once('controllers/base_controller.php');
-require_once('models/work.php');
+require_once('controllers/BaseController.php');
+require_once('models/Work.php');
 
 class WorksController extends BaseController
 {
